@@ -3,8 +3,8 @@ import socket
 CRLF = "\r\n"
 
 request = [
-    "GET /pandas-docs/stable/ HTTP/1.1",
-    "Host: https://pandas.pydata.org/",
+    "GET /wiki/Fortune_Global_50 HTTP/1.1",
+    "Host: www.wikipedia.org",
     "Connection: Close",
     "User-agent: Mozilla/5.0",
     "",
@@ -12,7 +12,7 @@ request = [
 
 # Connect to the server
 s = socket.socket()
-s.connect(('www.google.com', 80))
+s.connect(('www.wikipedia.org', 80))
 
 # Send an HTTP request
 http_packet =  (CRLF.join(request))
